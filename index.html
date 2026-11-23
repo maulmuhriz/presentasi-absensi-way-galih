@@ -1,0 +1,2249 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Absensi Pegawai Kantor Desa Way Galih Berbasis Web · Kelompok 4</title>
+  <meta name="description" content="Presentasi Solusi dan Evaluasi Before–After Proyek Sistem Absensi Desa Way Galih Berbasis Web — Kapita Selekta IF25-41031 ITERA">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Progress Bar Top -->
+  <div id="progressBar" role="progressbar" aria-valuemin="1" aria-valuemax="17" aria-valuenow="1"></div>
+
+  <!-- Stage & Frame 16:9 Letterbox -->
+  <main id="stage" aria-label="Panggung Presentasi">
+    <div id="frame">
+      <div id="canvas">
+
+        <!-- ===================================================================
+             SLIDE 1 — COVER
+             =================================================================== -->
+        <section class="slide slide-cover active" id="slide-1" data-slide="1" data-title="Cover">
+          <div class="cover-header">
+            <div class="cover-tag">
+              <span>PRESENTASI SOLUSI & EVALUASI BEFORE–AFTER · MINGGU 12–13</span>
+            </div>
+            <div class="cover-logos">
+              <img src="assets/logos/logo-itera.png" alt="Logo ITERA" class="cover-logo-itera">
+              <img src="assets/logos/logo-lampung-selatan.png" alt="Logo Desa Way Galih / Pemkab Lampung Selatan" class="cover-logo-mitra">
+            </div>
+          </div>
+
+          <div class="cover-hero">
+            <h1>Sistem Absensi Pegawai Kantor <br><span class="highlight-blue">Desa Way Galih</span> Berbasis Web</h1>
+            <p class="cover-subtitle">Presentasi Solusi dan Evaluasi Before–After</p>
+            <div class="cover-mitra-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Mitra: Pemerintah Desa Way Galih, Kec. Tanjung Bintang, Kab. Lampung Selatan</span>
+            </div>
+
+            <div class="cover-snapshot">
+              <div class="cover-snap-item">
+                <span class="cover-snap-label">Skor Rata-Rata Pre-Test</span>
+                <span class="cover-snap-value muted">2,13 <em>/ 5</em></span>
+              </div>
+              <div class="cover-snap-arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+              </div>
+              <div class="cover-snap-item">
+                <span class="cover-snap-label">Skor Rata-Rata Post-Test</span>
+                <span class="cover-snap-value">4,50 <em>/ 5</em></span>
+              </div>
+              <div class="cover-snap-divider" aria-hidden="true"></div>
+              <div class="cover-snap-item">
+                <span class="cover-snap-label">Uji Black-Box</span>
+                <span class="cover-snap-value">27 <em>/ 31 lulus</em></span>
+              </div>
+              <div class="cover-snap-divider" aria-hidden="true"></div>
+              <div class="cover-snap-item">
+                <span class="cover-snap-label">Pengujian Lapangan</span>
+                <span class="cover-snap-value">23 Nov 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cover-bottom">
+            <div class="cover-team-box">
+              <h3>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Kelompok 4 · Tim Pengembang
+              </h3>
+              <div class="cover-members-grid">
+                <div class="member-item">
+                  <span class="member-name" title="Maulana Muhammad Rizki (124140008)">Maulana Muhammad Rizki</span>
+                  <span class="member-role">Project Manager</span>
+                </div>
+                <div class="member-item">
+                  <span class="member-name" title="Rizki Merdiyansah (124140122)">Rizki Merdiyansah</span>
+                  <span class="member-role">Backend Dev</span>
+                </div>
+                <div class="member-item">
+                  <span class="member-name" title="Chesya Margaretha Deto (124140098)">Chesya Margaretha Deto</span>
+                  <span class="member-role">Frontend Dev</span>
+                </div>
+                <div class="member-item">
+                  <span class="member-name" title="Jelita Ayu Resito Siregar (124140056)">Jelita Ayu Resito S.</span>
+                  <span class="member-role">UI/UX Designer</span>
+                </div>
+                <div class="member-item">
+                  <span class="member-name" title="Pina Ramanda (124140170)">Pina Ramanda</span>
+                  <span class="member-role">Backend Dev</span>
+                </div>
+                <div class="member-item">
+                  <span class="member-name" title="Shafa Ayutyas Dewi (124140168)">Shafa Ayutyas Dewi</span>
+                  <span class="member-role">Software Tester</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cover-course-box">
+              <h3>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                Informasi Akademik
+              </h3>
+              <div class="cover-course-content">
+                <div class="cover-course-title">Kapita Selekta IF25-41031</div>
+                <div style="color: var(--text-secondary); margin-top: 3px;">Program Studi S1 Teknik Informatika</div>
+                <div style="color: var(--blue-600); font-weight: 700; margin-top: 2px;">Institut Teknologi Sumatera (ITERA)</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 2 — MITRA DAN MASALAH
+             =================================================================== -->
+        <section class="slide" id="slide-2" data-slide="2" data-title="Mitra dan Masalah">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Identifikasi Awal</span>
+              <h2 class="slide-title">Mitra dan Masalah</h2>
+              <p class="slide-subtitle">Profil pemangku kepentingan dan persoalan tata kelola kehadiran yang dihadapi</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Desa Way Galih</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body">
+            <div class="grid-2" style="height: 100%;">
+              <div class="card mitra-table-card">
+                <div class="card-header-sm">
+                  <span class="card-title-sm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                    Profil Kemitraan Pemerintah Desa
+                  </span>
+                  <span class="badge badge-blue">Mitra Resmi</span>
+                </div>
+                <div class="mitra-row">
+                  <div class="mitra-label">Mitra Pemerintah</div>
+                  <div class="mitra-value"><strong>Pemerintah Desa Way Galih</strong>, Kecamatan Tanjung Bintang, Kabupaten Lampung Selatan.</div>
+                </div>
+                <div class="mitra-row">
+                  <div class="mitra-label">Mitra Sasaran</div>
+                  <div class="mitra-value">Staf & aparatur Kantor Desa Way Galih (Kepala Desa, Sekretaris Desa, Kaur, Kasi) dan operator pengelola absensi.</div>
+                </div>
+                <div class="mitra-row">
+                  <div class="mitra-label">Aspek Kegiatan</div>
+                  <div class="mitra-value"><span class="badge badge-navy">Pelayanan Publik</span> & Tata Kelola Administrasi Kepegawaian Desa.</div>
+                </div>
+                <div class="mitra-row" style="align-items: flex-start;">
+                  <div class="mitra-label">Masalah Utama</div>
+                  <div class="mitra-value" style="color: var(--danger-accent); font-weight: 600;">
+                    Absensi aparatur masih dilakukan secara manual menggunakan buku fisik tanda tangan, belum memiliki verifikasi lokasi, sehingga rekapitulasi membutuhkan waktu lama dan rawan kesalahan pencatatan kehadiran.
+                  </div>
+                </div>
+
+                <div class="slide2-context">
+                  <div class="slide2-context-title">Konteks Pengamatan Awal</div>
+                  <div class="slide2-context-grid">
+                    <div class="ctx-item">
+                      <span class="ctx-label">Waktu Observasi</span>
+                      <span class="ctx-value">15 September 2026</span>
+                    </div>
+                    <div class="ctx-item">
+                      <span class="ctx-label">Lokasi</span>
+                      <span class="ctx-value">Balai Desa Way Galih</span>
+                    </div>
+                    <div class="ctx-item">
+                      <span class="ctx-label">Metode</span>
+                      <span class="ctx-value">Observasi dan Wawancara</span>
+                    </div>
+                    <div class="ctx-item">
+                      <span class="ctx-label">Pengguna Sasaran</span>
+                      <span class="ctx-value">Staf &amp; aparatur desa</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="slide2-right-col">
+                <div class="compare-card manual">
+                  <div class="compare-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+                    Kondisi Manual (Before)
+                  </div>
+                  <ul class="compare-list">
+                    <li><span>•</span> Lembaran buku absensi tanda tangan fisik terbuka.</li>
+                    <li><span>•</span> Tanpa validasi lokasi fisik (rawan titip absen).</li>
+                    <li><span>•</span> Rekapitulasi bulanan memakan waktu 2–3 hari kerja.</li>
+                    <li><span>•</span> Pencarian data lampau sulit dan rawan sobek/hilang.</li>
+                  </ul>
+                </div>
+
+                <div class="compare-card digital">
+                  <div class="compare-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Kebutuhan Digital (After)
+                  </div>
+                  <ul class="compare-list">
+                    <li><span>•</span> Absensi digital nirsentuh cepat via scan QR Code.</li>
+                    <li><span>•</span> Verifikasi lokasi presisi radius GPS Balai Desa.</li>
+                    <li><span>•</span> Rekapitulasi otomatis tersimpan real-time di server.</li>
+                    <li><span>•</span> Riwayat kehadiran transparan dan ekspor 1-klik.</li>
+                  </ul>
+                </div>
+
+                <div class="card card-alt slide2-scope-card">
+                  <div class="card-title-sm" style="color: var(--navy-800);">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                    Tiga Titik Persoalan yang Disasar
+                  </div>
+                  <div class="slide2-scope-grid">
+                    <div class="scope-item">
+                      <span class="scope-num">1</span>
+                      <div>
+                        <strong>Pencatatan</strong>
+                        <span>Dari buku tanda tangan ke absensi digital.</span>
+                      </div>
+                    </div>
+                    <div class="scope-item">
+                      <span class="scope-num">2</span>
+                      <div>
+                        <strong>Pembuktian</strong>
+                        <span>Dari tanpa verifikasi ke validasi radius GPS + QR.</span>
+                      </div>
+                    </div>
+                    <div class="scope-item">
+                      <span class="scope-num">3</span>
+                      <div>
+                        <strong>Pelaporan</strong>
+                        <span>Dari rekap manual ke riwayat dan ekspor otomatis.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Desa Way Galih</span>
+            </div>
+            <div class="slide-footer-num">Slide 02 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 3 — KONDISI AWAL
+             =================================================================== -->
+        <section class="slide" id="slide-3" data-slide="3" data-title="Kondisi Awal">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Baseline Riset</span>
+              <h2 class="slide-title">Kondisi Awal</h2>
+              <p class="slide-subtitle">Hasil observasi lapangan dan data survei baseline sebelum solusi diterapkan</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Baseline Pre-Test</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body">
+            <div class="grid-3" style="margin-bottom: 14px;">
+              <div class="pillar-card">
+                <div class="pillar-title">Metode Pencatatan</div>
+                <div class="pillar-value">Manual</div>
+                <div class="pillar-desc">Buku absensi tanda tangan fisik harian. (Sumber: observasi 15 Sep 2026).</div>
+              </div>
+              <div class="pillar-card">
+                <div class="pillar-title">Verifikasi Lokasi</div>
+                <div class="pillar-value">Tidak Ada</div>
+                <div class="pillar-desc">Tidak terdapat mekanisme pembuktian kehadiran di kantor desa.</div>
+              </div>
+              <div class="pillar-card">
+                <div class="pillar-title">Riwayat & Rekapitulasi</div>
+                <div class="pillar-value">Belum Terintegrasi</div>
+                <div class="pillar-desc">Rekap bulanan dihitung lembar per lembar secara terpisah.</div>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table class="styled-table">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Indikator Evaluasi (Baseline Pre-Test)</th>
+                    <th style="width: 130px;" class="num-cell">Skor Rata-Rata</th>
+                    <th style="width: 140px;">Kategori Persepsi</th>
+                    <th>Kondisi Nyata Lapangan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><strong>Kemudahan proses absensi</strong></td>
+                    <td class="num-cell" style="color: var(--danger-accent);">2,38</td>
+                    <td><span class="badge badge-warning">Cukup Rendah</span></td>
+                    <td>Aparatur harus antre bergantian menandatangani buku fisik di meja piket.</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><strong>Kejelasan status kehadiran</strong></td>
+                    <td class="num-cell" style="color: var(--warning-accent);">2,75</td>
+                    <td><span class="badge badge-warning">Sedang</span></td>
+                    <td>Keterangan terlambat atau hadir sering tidak dicatat dengan tegas.</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><strong>Kemudahan menemukan riwayat</strong></td>
+                    <td class="num-cell" style="color: var(--danger-accent);">1,63</td>
+                    <td><span class="badge badge-danger">Sangat Rendah</span></td>
+                    <td>Mencari data tanggal lampau harus membuka arsip tumpukan buku lama.</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td><strong>Kemudahan memeriksa data</strong></td>
+                    <td class="num-cell" style="color: var(--danger-accent);">2,00</td>
+                    <td><span class="badge badge-danger">Rendah</span></td>
+                    <td>Pimpinan kesulitan memverifikasi keabsahan kehadiran secara berkala.</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td><strong>Kewajaran waktu proses</strong></td>
+                    <td class="num-cell" style="color: var(--danger-accent);">2,00</td>
+                    <td><span class="badge badge-danger">Rendah</span></td>
+                    <td>Waktu rekapitulasi memakan waktu berhari-hari pada setiap akhir bulan.</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td><strong>Kesesuaian dengan kebutuhan</strong></td>
+                    <td class="num-cell" style="color: var(--danger-accent);">2,00</td>
+                    <td><span class="badge badge-danger">Rendah</span></td>
+                    <td>Sistem manual tidak lagi relevan dengan tuntutan tata kelola digital.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="notice-box warning">
+              </strong> https://docs.google.com/spreadsheets/d/1XI4nBId7Rl4jHCE9YAxt-SwrOxCPtpD8ptIF3ip8DRU/edit?usp=sharing
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Kondisi Awal (Pre-test n=8)</span>
+            </div>
+            <div class="slide-footer-num">Slide 03 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 4 — SDGS DESA DAN TARGET
+             =================================================================== -->
+        <section class="slide" id="slide-4" data-slide="4" data-title="SDGs Desa dan Target">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Kerangka Target</span>
+              <h2 class="slide-title">SDGs Desa dan Target</h2>
+              <p class="slide-subtitle">Penyelarasan target kegiatan terhadap indikator resmi proposal pengajuan</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">SDGs 16</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body">
+            <div class="sdgs-hero-badge">
+              <div class="sdgs-icon-wrap">16</div>
+              <div class="sdgs-text">
+                <h3>SDGs Desa 16: Desa Damai Berkeadilan</h3>
+                <p>Mendukung terwujudnya kelembagaan dan tata kelola pemerintah desa yang akuntabel, transparan, dan berintegritas tinggi.</p>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table class="styled-table">
+                <thead>
+                  <tr>
+                    <th style="width: 140px;">Indikator</th>
+                    <th style="width: 250px;">Kondisi Awal</th>
+                    <th>Target Terukur Proposal</th>
+                    <th style="width: 280px;">Cara Pembuktian</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div style="font-weight: 800; font-size: 14px; color: var(--blue-600);">16.6.2.(a)</div>
+                      <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Kode resmi proposal</div>
+                    </td>
+                    <td>
+                      Pencatatan kehadiran staf kantor desa masih dilakukan secara manual menggunakan buku fisik, tanpa verifikasi lokasi kerja.
+                    </td>
+                    <td>
+                      <strong style="color: var(--navy-800);">Tersedianya sistem absensi digital berbasis QR Code dan GPS</strong> yang dipakai oleh staf/perangkat desa Way Galih dan mendukung pencatatan kehadiran yang terintegrasi.
+                    </td>
+                    <td>
+                      <ul style="padding-left: 16px; font-size: 11.5px; line-height: 1.45;">
+                        <li>Log absensi riil pada database sistem.</li>
+                        <li>Hasil 31 skenario <em>black-box testing</em>.</li>
+                        <li>Dokumentasi implementasi & user guide.</li>
+                        <li>Wawancara evaluasi perangkat desa.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="chain-strip">
+              <div class="chain-node">
+                <div class="chain-step">Masalah</div>
+                <div class="chain-title">Presensi manual tanpa bukti lokasi</div>
+              </div>
+              <div class="chain-node">
+                <div class="chain-step">Solusi</div>
+                <div class="chain-title">Absensi QR Code + validasi radius GPS</div>
+              </div>
+              <div class="chain-node">
+                <div class="chain-step">Bukti</div>
+                <div class="chain-title">Log sistem, uji black-box, wawancara</div>
+              </div>
+              <div class="chain-node">
+                <div class="chain-step">Kontribusi SDGs</div>
+                <div class="chain-title">Tata kelola desa yang akuntabel</div>
+              </div>
+            </div>
+
+            <div class="notice-box info" style="margin-top: 12px;">
+              <strong>Kaitan dengan Indikator:</strong> Indikator 16.6.2.(a) menekankan tersedianya kelembagaan desa yang transparan dan akuntabel. Sistem absensi digital menjadi salah satu <em>bukti keluaran</em> (output) yang dapat diverifikasi melalui log kehadiran, bukan klaim dampak sosial jangka panjang.
+            </div>
+
+            <div class="sdgs-ladder">
+              <div class="ladder-item claimed">
+                <div class="ladder-tier">Output · Diklaim</div>
+                <div class="ladder-text">Sistem absensi QR + GPS berjalan dan dipakai aparatur desa.</div>
+                <div class="ladder-tag">Terbukti lewat log &amp; uji</div>
+              </div>
+              <div class="ladder-item partial">
+                <div class="ladder-tier">Outcome · Sebagian</div>
+                <div class="ladder-text">Rekap kehadiran lebih cepat diakses admin melalui dashboard.</div>
+                <div class="ladder-tag">Indikatif, belum diukur formal</div>
+              </div>
+              <div class="ladder-item none">
+                <div class="ladder-tier">Impact · Tidak Diklaim</div>
+                <div class="ladder-text">Peningkatan akuntabilitas tata kelola desa secara menyeluruh.</div>
+                <div class="ladder-tag">Di luar cakupan evaluasi</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Proposal Butir 7</span>
+            </div>
+            <div class="slide-footer-num">Slide 04 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 5 — SOLUSI YANG DIBANGUN
+             =================================================================== -->
+        <section class="slide" id="slide-5" data-slide="5" data-title="Solusi yang Dibangun">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Solusi Teknis</span>
+              <h2 class="slide-title">Solusi yang Dibangun</h2>
+              <p class="slide-subtitle">Pemetaan dari masalah operasional mitra ke fitur sistem dan implementasi teknologi</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Fitur & Arsitektur</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body">
+            <div class="solution-row header">
+              <div>Masalah Mitra</div>
+              <div>Fitur / Komponen Solusi</div>
+              <div>Teknologi yang Digunakan</div>
+            </div>
+
+            <div class="solution-row">
+              <div>
+                <strong>Pencatatan manual di buku</strong><br>
+                <span style="color: var(--text-muted); font-size: 11px;">Rawan titip absen dan antre fisik.</span>
+              </div>
+              <div>
+                <strong>Absensi Digital Cepat</strong><br>
+                <span>Login Google resmi (whitelist email admin) dan pemindaian Absen QR Kantor fisik.</span>
+              </div>
+              <div class="tech-tag-wrap">
+                <span class="tech-pill">React 18 + Vite</span>
+                <span class="tech-pill">Google Sign-In</span>
+                <span class="tech-pill">Laravel Sanctum</span>
+              </div>
+            </div>
+
+            <div class="solution-row">
+              <div>
+                <strong>Tanpa verifikasi lokasi</strong><br>
+                <span style="color: var(--text-muted); font-size: 11px;">Tidak ada bukti fisik kehadiran.</span>
+              </div>
+              <div>
+                <strong>Validasi Lokasi GPS Presisi</strong><br>
+                <span>Validasi radius GPS Balai Desa (100 m), QR statis terenkripsi, waktu dicatat server NTP.</span>
+              </div>
+              <div class="tech-tag-wrap">
+                <span class="tech-pill">Geolocation API</span>
+                <span class="tech-pill">Haversine Server</span>
+                <span class="tech-pill">Server NTP Time</span>
+              </div>
+            </div>
+
+            <div class="solution-row">
+              <div>
+                <strong>Rekap lambat & data tersebar</strong><br>
+                <span style="color: var(--text-muted); font-size: 11px;">Rawan salah hitung tiap bulan.</span>
+              </div>
+              <div>
+                <strong>Riwayat Real-Time & Rekapitulasi</strong><br>
+                <span>Dashboard analitik admin, rekapitulasi per periode/pegawai, dan fitur ekspor laporan.</span>
+              </div>
+              <div class="tech-tag-wrap">
+                <span class="tech-pill">Laravel 13 REST API</span>
+                <span class="tech-pill">PostgreSQL DB</span>
+                <span class="tech-pill">Export Engine</span>
+              </div>
+            </div>
+
+            <div class="solution-row">
+              <div>
+                <strong>Izin & dinas luar belum tercatat</strong><br>
+                <span style="color: var(--text-muted); font-size: 11px;">Surat tugas luar kerap tercecer.</span>
+              </div>
+              <div>
+                <strong>Layanan Izin & Tugas Luar Kantor</strong><br>
+                <span>Pengajuan izin + persetujuan; Absen Tugas Luar dengan upload 2 foto, deskripsi tugas, & GPS.</span>
+              </div>
+              <div class="tech-tag-wrap">
+                <span class="tech-pill">Laravel 13 Storage</span>
+                <span class="tech-pill">Tailwind CSS</span>
+                <span class="tech-pill">PostgreSQL</span>
+              </div>
+            </div>
+
+            <div class="notice-box info" style="margin-top: 10px;">
+              <strong>Alur Penelusuran:</strong> Setiap fitur pada tabel di atas dapat ditelusuri kembali ke satu masalah mitra yang spesifik — bukan daftar fitur tambahan tanpa dasar kebutuhan.
+            </div>
+
+            <div style="margin-top: 10px;">
+              <div style="font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;">
+                Daftar Fitur Lengkap Sistem
+              </div>
+              <div class="chip-list" style="margin-top: 0;">
+                <span class="chip-item"><span class="chip-num">1</span> Login Google (whitelist email)</span>
+                <span class="chip-item"><span class="chip-num">2</span> Absensi QR Code kantor</span>
+                <span class="chip-item"><span class="chip-num">3</span> Validasi GPS radius Balai Desa</span>
+                <span class="chip-item"><span class="chip-num">4</span> Waktu dicatat server</span>
+                <span class="chip-item"><span class="chip-num">5</span> Riwayat absensi</span>
+                <span class="chip-item"><span class="chip-num">6</span> Dashboard admin</span>
+                <span class="chip-item"><span class="chip-num">7</span> Rekap per periode &amp; pegawai</span>
+                <span class="chip-item"><span class="chip-num">8</span> Ekspor laporan</span>
+                <span class="chip-item"><span class="chip-num">9</span> Pengajuan izin &amp; persetujuan</span>
+                <span class="chip-item"><span class="chip-num">10</span> Absensi tugas luar (2 foto, deskripsi, GPS)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Solusi & Komponen</span>
+            </div>
+            <div class="slide-footer-num">Slide 05 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 6 — RANCANGAN SOLUSI
+             =================================================================== -->
+        <section class="slide" id="slide-6" data-slide="6" data-title="Rancangan Solusi">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Arsitektur & Alur</span>
+              <h2 class="slide-title">Rancangan Solusi</h2>
+              <p class="slide-subtitle">Diagram arsitektur perangkat lunak dan aliran data proses absensi terpadu</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Sistem Arsitektur</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body">
+            <div class="arch-diagram-card">
+              <img src="assets/images/arsitektur-alur.png" alt="Diagram Arsitektur Sistem Absensi Desa Way Galih" class="arch-img">
+            </div>
+
+            <div class="user-flow-strip">
+              <div class="flow-step-item">
+                <div class="flow-step-num">1</div>
+                <div class="flow-step-text">Login Google (Whitelist Email)</div>
+              </div>
+              <div class="flow-step-arrow">→</div>
+              <div class="flow-step-item">
+                <div class="flow-step-num">2</div>
+                <div class="flow-step-text">Izin Lokasi (Browser GPS)</div>
+              </div>
+              <div class="flow-step-arrow">→</div>
+              <div class="flow-step-item">
+                <div class="flow-step-num">3</div>
+                <div class="flow-step-text">Validasi Radius Balai Desa</div>
+              </div>
+              <div class="flow-step-arrow">→</div>
+              <div class="flow-step-item">
+                <div class="flow-step-num">4</div>
+                <div class="flow-step-text">Pindai QR Code Kantor</div>
+              </div>
+              <div class="flow-step-arrow">→</div>
+              <div class="flow-step-item">
+                <div class="flow-step-num">5</div>
+                <div class="flow-step-text">Server Catat Waktu & Lokasi</div>
+              </div>
+              <div class="flow-step-arrow">→</div>
+              <div class="flow-step-item">
+                <div class="flow-step-num">6</div>
+                <div class="flow-step-text">Riwayat & Rekap Admin</div>
+              </div>
+            </div>
+
+            <div class="grid-3" style="margin-top: 10px;">
+              <div class="card card-alt" style="padding: 8px 12px; font-size: 11.5px;">
+                <strong>Frontend:</strong> React + Vite + Tailwind CSS (SPA responsif desktop & mobile)
+              </div>
+              <div class="card card-alt" style="padding: 8px 12px; font-size: 11.5px;">
+                <strong>Backend:</strong> Laravel 13 REST API + Laravel Sanctum auth token
+              </div>
+              <div class="card card-alt" style="padding: 8px 12px; font-size: 11.5px;">
+                <strong>Database:</strong> PostgreSQL (Schema terstruktur, audit log kehadiran)
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Gambar 1. Arsitektur dan Alur Sistem</span>
+            </div>
+            <div class="slide-footer-num">Slide 06 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 7 — DEMONSTRASI PRODUK
+             =================================================================== -->
+        <section class="slide" id="slide-7" data-slide="7" data-title="Demonstrasi Produk">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Pengujian Produk</span>
+              <h2 class="slide-title">Demonstrasi Produk</h2>
+              <p class="slide-subtitle">Skenario penggunaan sistem secara utuh beserta penanganan kondisi gagal</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Uji Fungsional</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body">
+            <div class="demo-layout">
+              <div class="demo-steps-list">
+                <div class="demo-step-card active" data-img="assets/screenshots/01-login-google.png" data-caption="Halaman login Google" data-step="01">
+                  <div class="demo-step-title">
+                    <span><span class="demo-step-num">01</span>Login Google</span>
+                  </div>
+                  <div class="demo-step-desc">Pegawai membuka aplikasi dan masuk menggunakan akun Google resmi desa.</div>
+                </div>
+
+                <div class="demo-step-card" data-img="assets/screenshots/01-login-google.png" data-caption="Halaman login Google" data-step="02">
+                  <div class="demo-step-title">
+                    <span><span class="demo-step-num">02</span>Verifikasi Whitelist</span>
+                  </div>
+                  <div class="demo-step-desc">Server memeriksa apakah email terdaftar pada whitelist admin; akun nonaktif ditolak.</div>
+                </div>
+
+                <div class="demo-step-card" data-img="" data-caption="Izin akses lokasi browser" data-step="03">
+                  <div class="demo-step-title">
+                    <span><span class="demo-step-num">03</span>Memberikan Izin Lokasi</span>
+                  </div>
+                  <div class="demo-step-desc">Browser meminta persetujuan akses koordinat GPS perangkat pengguna.</div>
+                </div>
+
+                <div class="demo-step-card" data-img="assets/screenshots/02-scan-qr-validasi-radius.png" data-caption="Validasi radius lokasi (12 m, Lokasi Valid)" data-step="04">
+                  <div class="demo-step-title">
+                    <span><span class="demo-step-num">04</span>Validasi Lokasi (Radius)</span>
+                  </div>
+                  <div class="demo-step-desc">Sistem menghitung jarak ke titik Balai Desa dan menolak bila di luar radius.</div>
+                </div>
+
+                <div class="demo-step-card" data-img="assets/screenshots/02-scan-qr-validasi-radius.png" data-caption="Pemindai QR Code kantor + indikator radius" data-step="05">
+                  <div class="demo-step-title">
+                    <span><span class="demo-step-num">05</span>Memindai QR Code Kantor</span>
+                  </div>
+                  <div class="demo-step-desc">Pemindai kamera membaca QR Code fisik yang terpasang di kantor desa.</div>
+                </div>
+
+                <div class="demo-step-card" data-img="assets/screenshots/03-absensi-tercatat.png" data-caption="Konfirmasi status absensi" data-step="06">
+                  <div class="demo-step-title">
+                    <span><span class="demo-step-num">06</span>Melihat Status Absensi</span>
+                  </div>
+                  <div class="demo-step-desc">Server mencatat waktu resmi dan menampilkan konfirmasi status kehadiran.</div>
+                </div>
+
+                <div class="demo-step-card" data-img="assets/screenshots/04-riwayat-presensi.png" data-caption="Halaman riwayat presensi" data-step="07">
+                  <div class="demo-step-title">
+                    <span><span class="demo-step-num">07</span>Melihat Riwayat Kehadiran</span>
+                  </div>
+                  <div class="demo-step-desc">Pegawai membuka halaman riwayat untuk memeriksa catatan absensi sebelumnya.</div>
+                </div>
+
+                <div class="demo-step-card" data-img="" data-caption="Dashboard admin & rekap" data-step="08">
+                  <div class="demo-step-title">
+                    <span><span class="demo-step-num">08</span>Admin: Dashboard & Rekap</span>
+                  </div>
+                  <div class="demo-step-desc">Admin mengakses dashboard, meninjau rekap per periode/pegawai, dan mengekspor laporan.</div>
+                </div>
+
+                <div class="negative-case-card">
+                  <h4>Skenario Pengujian Negatif:</h4>
+                  <div class="negative-tags">
+                    <span class="badge badge-danger">Lokasi di luar radius</span>
+                    <span class="badge badge-danger">Izin lokasi ditolak</span>
+                    <span class="badge badge-danger">QR tidak valid</span>
+                    <span class="badge badge-danger">Akun tidak terdaftar</span>
+                    <span class="badge badge-danger">Absensi duplikat</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="demo-preview-card">
+                <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+                  <span style="font-size: 11px; font-weight: 800; color: var(--navy-800); text-transform: uppercase; letter-spacing: 0.05em;">
+                    Tangkapan Layar Implementasi
+                  </span>
+                  <span class="badge badge-success" id="demoShotBadge">Aset Uji Lapangan</span>
+                </div>
+                <div style="flex: 1; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 0;">
+                  <img id="demoPreviewImage" src="assets/screenshots/01-login-google.png" alt="Tangkapan layar implementasi sistem absensi Desa Way Galih" class="demo-preview-img">
+                  <div id="demoPreviewEmpty" class="demo-preview-empty">
+                    <div class="dpe-icon">🖼️</div>
+                    <div class="dpe-title">Tangkapan layar belum tersedia</div>
+                    <div class="dpe-text" id="demoPreviewEmptyText">
+                      Slot ini disediakan untuk gambar asli aplikasi. Ganti dengan berkas di <code>assets/screenshots/</code>.
+                    </div>
+                  </div>
+                </div>
+                <div style="font-size: 10.5px; color: var(--text-muted); margin-top: 8px; text-align: center; line-height: 1.4;" id="demoPreviewCaption">
+                  Tahap 01 — Halaman login Google. Gambar diambil dari implementasi sistem yang dikembangkan tim.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Pengujian Lapangan Desa Way Galih</span>
+            </div>
+            <div class="slide-footer-num">Slide 07 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 8 — INOVASI DAN KESIAPTERAPAN
+             =================================================================== -->
+        <section class="slide" id="slide-8" data-slide="8" data-title="Inovasi dan Kesiapterapan">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Diferensiasi & Kesiapan</span>
+              <h2 class="slide-title">Inovasi dan Kesiapterapan</h2>
+              <p class="slide-subtitle">Diferensiasi terhadap cara lama dan posisi Tingkat Kesiapterapan Teknologi (TKT)</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Posisi TKT</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body">
+            <div class="grid-2">
+              <div class="card">
+                <div class="card-header-sm">
+                  <span class="card-title-sm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    Dibanding Cara Lama
+                  </span>
+                  <span class="badge badge-navy">Buku Manual</span>
+                </div>
+                <div style="font-size: 12.5px; line-height: 1.5; color: var(--text-secondary);">
+                  <strong style="color: var(--text-primary);">Cara Lama:</strong> Menggunakan lembar kertas buku absensi dan tanda tangan pulpen. Menimbulkan antrean, rentan titip tanda tangan, dan rekapitulasi data memerlukan waktu lama.<br><br>
+                  <strong style="color: var(--blue-600);">Yang Berbeda:</strong> Absensi nirsentuh melalui pemindaian QR Code yang divalidasi geofencing GPS Balai Desa dan langsung terdata secara terpusat di server.
+                </div>
+              </div>
+
+            <div class="tkt-box">
+              <div class="tkt-level">
+                <div class="tkt-badge-big">TKT 4–5</div>
+                <div>
+                  <div style="font-size: 13.5px; font-weight: 800; color: var(--navy-900);">Kesiapan Komponen di Lingkungan Relevan</div>
+                  <div style="font-size: 11px; color: var(--text-muted);">Target Akademik TKT 5–6 · Diklaim secara proporsional sesuai pengujian riil</div>
+                </div>
+              </div>
+              <div class="tkt-status-pill">Tervalidasi di Kantor Desa</div>
+            </div>
+            </div>
+
+            <div class="tkt-scale">
+              <div class="tkt-step done"><span class="tkt-step-num">1</span><span class="tkt-step-label">Prinsip</span></div>
+              <div class="tkt-step done"><span class="tkt-step-num">2</span><span class="tkt-step-label">Konsep</span></div>
+              <div class="tkt-step done"><span class="tkt-step-num">3</span><span class="tkt-step-label">Bukti konsep</span></div>
+              <div class="tkt-step current"><span class="tkt-step-num">4</span><span class="tkt-step-label">Lab</span></div>
+              <div class="tkt-step current"><span class="tkt-step-num">5</span><span class="tkt-step-label">Lingkungan relevan</span></div>
+              <div class="tkt-step"><span class="tkt-step-num">6</span><span class="tkt-step-label">Prototipe</span></div>
+              <div class="tkt-step"><span class="tkt-step-num">7</span><span class="tkt-step-label">Demo</span></div>
+              <div class="tkt-step"><span class="tkt-step-num">8</span><span class="tkt-step-label">Siap</span></div>
+              <div class="tkt-step"><span class="tkt-step-num">9</span><span class="tkt-step-label">Produksi</span></div>
+            </div>
+
+            <div class="grid-2" style="margin-top: 12px;">
+              <div class="notice-box info" style="margin: 0;">
+                <strong>Bukti Uji Lingkungan Mitra:</strong> Diuji coba langsung pada jaringan dan lingkungan operasional Kantor Desa Way Galih bersama operator (Pak Sadewo) dan staf desa (23 Nov 2026).
+              </div>
+              <div class="notice-box warning" style="margin: 0;">
+                <strong>Batas Kesiapan Sistem:</strong> Belum mendukung PWA native offline-first, belum memiliki fitur absensi jam pulang (checkout), dan mitigasi Fake GPS browser masih terbatas.
+              </div>
+            </div>
+
+            <div class="evidence-slot evidence-slot-photo" style="margin-top: 12px;">
+              <img src="assets/screenshots/pengujian-desa.png" alt="Dokumentasi uji lapangan di Kantor Desa Way Galih" class="evidence-photo">
+              <div class="evidence-text">
+                <strong>Dokumentasi Uji Lapangan</strong>
+                Pengujian langsung alur absensi QR bersama operator desa di Kantor Desa Way Galih, 23 November 2026.
+                <div class="evidence-meta">
+                  <span><b>Lokasi</b> Kantor Desa Way Galih</span>
+                  <span><b>Operator</b> Pak Sadewo</span>
+                  <span><b>Perangkat</b> Laptop + Browser</span>
+                </div>
+              </div>
+              <div class="evidence-stats">
+                <div class="evidence-stat">
+                  <span class="evidence-stat-num">27<span>/31</span></span>
+                  <span class="evidence-stat-label">Skenario black-box lulus</span>
+                </div>
+                <div class="evidence-stat">
+                  <span class="evidence-stat-num">1<span> sesi</span></span>
+                  <span class="evidence-stat-label">Uji langsung di lokasi mitra</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Inovasi & TKT</span>
+            </div>
+            <div class="slide-footer-num">Slide 08 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 9 — DESAIN EVALUASI
+             =================================================================== -->
+        <section class="slide" id="slide-9" data-slide="9" data-title="Desain Evaluasi">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Metodologi Evaluasi</span>
+              <h2 class="slide-title">Desain Evaluasi</h2>
+              <p class="slide-subtitle">Metodologi pengukuran before–after, struktur instrumen, dan dataset evaluasi</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Metode Before–After</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body">
+            <div class="table-wrap">
+              <table class="styled-table">
+                <thead>
+                  <tr>
+                    <th>Dimensi Ukuran</th>
+                    <th>Cara Mengukur</th>
+                    <th>Instrumen</th>
+                    <th>Partisipan Data</th>
+                    <th>Waktu Pelaksanaan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Kemudahan proses &amp; waktu</strong></td>
+                    <td>Rata-rata butir kemudahan proses &amp; kewajaran waktu</td>
+                    <td>Kuesioner pre-test &amp; post-test</td>
+                    <td>8 responden</td>
+                    <td>23 Nov 2026</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Kejelasan &amp; riwayat</strong></td>
+                    <td>Rata-rata butir kejelasan status &amp; kemudahan lacak riwayat</td>
+                    <td>Kuesioner pre-test &amp; post-test</td>
+                    <td>8 responden</td>
+                    <td>23 Nov 2026</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Pemeriksaan data &amp; kebutuhan</strong></td>
+                    <td>Rata-rata butir kemudahan periksa data &amp; kesesuaian kebutuhan</td>
+                    <td>Kuesioner pre-test &amp; post-test</td>
+                    <td>8 responden</td>
+                    <td>23 Nov 2026</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Kemudahan penggunaan total</strong></td>
+                    <td>Rata-rata seluruh 6 indikator</td>
+                    <td>Kuesioner Likert 1–5</td>
+                    <td>8 responden</td>
+                    <td>23 Nov 2026</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="grid-2" style="margin-top: 14px;">
+              <div class="card card-alt">
+                <div class="card-title-sm">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  Struktur Dataset Evaluasi
+                </div>
+                <div style="font-size: 12px; color: var(--text-secondary); margin-top: 6px; line-height: 1.45;">
+                  • <strong>Pre-test:</strong> 8 responden pegawai kantor desa (P01–P08).<br>
+                  • <strong>Post-test:</strong> 8 responden yang sama, kuesioner identik.
+                </div>
+              </div>
+
+              <div class="card card-alt">
+                <div class="card-title-sm">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Ketentuan Pelaporan Data
+                </div>
+                <div style="font-size: 12px; color: var(--text-secondary); margin-top: 6px; line-height: 1.45;">
+                  Seluruh 8 responden adalah pegawai Kantor Desa Way Galih yang mengisi kuesioner pre-test dan post-test pada sesi pengujian 23 November 2026. Data dilaporkan apa adanya sebagai evaluasi penerimaan pengguna.
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 12px;">
+              <div style="font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;">
+                Enam Indikator yang Diukur (Sama pada Slide 03, 09, dan 10)
+              </div>
+              <div class="chip-list" style="margin-top: 0;">
+                <span class="chip-item"><span class="chip-num">1</span> Kemudahan proses absensi</span>
+                <span class="chip-item"><span class="chip-num">2</span> Kejelasan status kehadiran</span>
+                <span class="chip-item"><span class="chip-num">3</span> Kemudahan menemukan riwayat</span>
+                <span class="chip-item"><span class="chip-num">4</span> Kemudahan memeriksa data</span>
+                <span class="chip-item"><span class="chip-num">5</span> Kewajaran waktu proses</span>
+                <span class="chip-item"><span class="chip-num">6</span> Kesesuaian dengan kebutuhan</span>
+              </div>
+            </div>
+
+            <div class="eval-procedure">
+              <div class="eval-proc-head">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Prosedur Pengukuran Before–After
+              </div>
+              <div class="eval-proc-steps">
+                <div class="ep-step">
+                  <span class="ep-num">A</span>
+                  <div>
+                    <strong>Pre-test</strong>
+                    <span>Kuesioner sebelum sistem digunakan, mengukur persepsi kondisi manual.</span>
+                  </div>
+                </div>
+                <div class="ep-step">
+                  <span class="ep-num">B</span>
+                  <div>
+                    <strong>Intervensi</strong>
+                    <span>Penggunaan sistem absensi QR + GPS oleh aparatur desa.</span>
+                  </div>
+                </div>
+                <div class="ep-step">
+                  <span class="ep-num">C</span>
+                  <div>
+                    <strong>Post-test</strong>
+                    <span>Kuesioner identik setelah penggunaan, dengan 6 indikator yang sama.</span>
+                  </div>
+                </div>
+                <div class="ep-step">
+                  <span class="ep-num">D</span>
+                  <div>
+                    <strong>Analisis</strong>
+                    <span>Selisih rata-rata skor per indikator, dilaporkan secara deskriptif.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="eval-proc-note">
+                
+              </div>
+            </div>
+
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Desain Evaluasi Before-After</span>
+            </div>
+            <div class="slide-footer-num">Slide 09 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 10 — HASIL BEFORE DAN AFTER
+             =================================================================== -->
+        <section class="slide" id="slide-10" data-slide="10" data-title="Hasil Before dan After">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Hasil Pengukuran</span>
+              <h2 class="slide-title">Hasil Before dan After</h2>
+              <p class="slide-subtitle">Perbandingan perubahan rata-rata 6 indikator evaluasi sebelum dan sesudah penerapan</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Skala Likert 1–5</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body">
+            <div class="grid-2" style="height: 100%; gap: 16px;">
+              <!-- Visualisasi Bar Chart -->
+              <div class="chart-container-card">
+                <div class="chart-header">
+                  <span style="font-size: 13px; font-weight: 700; color: var(--navy-800);">Grafik Perbandingan Skor (1–5)</span>
+                  <div class="chart-legend">
+                    <div class="legend-item"><div class="legend-box before"></div><span>Sebelum</span></div>
+                    <div class="legend-item"><div class="legend-box after"></div><span>Sesudah</span></div>
+                  </div>
+                </div>
+
+                <div class="grouped-chart">
+                  <div class="gchart-grid">
+                    <span class="gline" style="bottom: 20%;"><i>1</i></span>
+                    <span class="gline" style="bottom: 40%;"><i>2</i></span>
+                    <span class="gline" style="bottom: 60%;"><i>3</i></span>
+                    <span class="gline" style="bottom: 80%;"><i>4</i></span>
+                    <span class="gline" style="bottom: 100%;"><i>5</i></span>
+                  </div>
+                  <div class="gbars">
+                  <div class="gbar-group">
+                    <div class="gbar-pair">
+                      <div class="gbar-col">
+                        <span class="gbar-val gbar-val-before">2,38</span>
+                        <div class="gbar before" style="height: 47.6%;"></div>
+                      </div>
+                      <div class="gbar-col">
+                        <span class="gbar-val gbar-val-after">4,25</span>
+                        <div class="gbar after" style="height: 85.0%;"></div>
+                      </div>
+                    </div>
+                    <div class="gbar-label">Kemudahan proses</div>
+                  </div>
+
+                  <div class="gbar-group">
+                    <div class="gbar-pair">
+                      <div class="gbar-col">
+                        <span class="gbar-val gbar-val-before">2,75</span>
+                        <div class="gbar before" style="height: 55.0%;"></div>
+                      </div>
+                      <div class="gbar-col">
+                        <span class="gbar-val gbar-val-after">4,63</span>
+                        <div class="gbar after" style="height: 92.6%;"></div>
+                      </div>
+                    </div>
+                    <div class="gbar-label">Kejelasan status</div>
+                  </div>
+
+                  <div class="gbar-group">
+                    <div class="gbar-pair">
+                      <div class="gbar-col">
+                        <span class="gbar-val gbar-val-before">1,63</span>
+                        <div class="gbar before" style="height: 32.6%;"></div>
+                      </div>
+                      <div class="gbar-col">
+                        <span class="gbar-val gbar-val-after">4,50</span>
+                        <div class="gbar after" style="height: 90.0%;"></div>
+                      </div>
+                    </div>
+                    <div class="gbar-label">Menemukan riwayat</div>
+                  </div>
+
+                  <div class="gbar-group">
+                    <div class="gbar-pair">
+                      <div class="gbar-col">
+                        <span class="gbar-val gbar-val-before">2,00</span>
+                        <div class="gbar before" style="height: 40.0%;"></div>
+                      </div>
+                      <div class="gbar-col">
+                        <span class="gbar-val gbar-val-after">4,75</span>
+                        <div class="gbar after" style="height: 95.0%;"></div>
+                      </div>
+                    </div>
+                    <div class="gbar-label">Memeriksa data</div>
+                  </div>
+
+                  <div class="gbar-group">
+                    <div class="gbar-pair">
+                      <div class="gbar-col">
+                        <span class="gbar-val gbar-val-before">2,00</span>
+                        <div class="gbar before" style="height: 40.0%;"></div>
+                      </div>
+                      <div class="gbar-col">
+                        <span class="gbar-val gbar-val-after">4,25</span>
+                        <div class="gbar after" style="height: 85.0%;"></div>
+                      </div>
+                    </div>
+                    <div class="gbar-label">Waktu proses</div>
+                  </div>
+
+                  <div class="gbar-group">
+                    <div class="gbar-pair">
+                      <div class="gbar-col">
+                        <span class="gbar-val gbar-val-before">2,00</span>
+                        <div class="gbar before" style="height: 40.0%;"></div>
+                      </div>
+                      <div class="gbar-col">
+                        <span class="gbar-val gbar-val-after">4,63</span>
+                        <div class="gbar after" style="height: 92.6%;"></div>
+                      </div>
+                    </div>
+                    <div class="gbar-label">Sesuai kebutuhan</div>
+                  </div>
+                  </div>
+                </div>
+
+                <div class="gchart-note">
+                  <span><i class="legend-box before"></i> Sebelum (pre-test)</span>
+                  <span><i class="legend-box after"></i> Sesudah (post-test)</span>
+                  <span class="gchart-scale">Skala Likert 1–5</span>
+                </div>
+              </div>
+
+              <!-- Tabel Data Lengkap -->
+              <div class="s10-right" style="display: flex; flex-direction: column; gap: 10px;">
+                <div class="table-wrap">
+                  <table class="styled-table compact">
+                    <thead>
+                      <tr>
+                        <th>Indikator Evaluasi</th>
+                        <th class="num-cell">Sebelum</th>
+                        <th class="num-cell">Sesudah</th>
+                        <th class="num-cell">Perubahan</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Kemudahan proses absensi</td>
+                        <td class="num-cell">2,38</td>
+                        <td class="num-cell">4,25</td>
+                        <td class="num-cell" style="color: var(--success-accent); font-weight: 800;">+1,87</td>
+                      </tr>
+                      <tr>
+                        <td>Kejelasan status kehadiran</td>
+                        <td class="num-cell">2,75</td>
+                        <td class="num-cell">4,63</td>
+                        <td class="num-cell" style="color: var(--success-accent); font-weight: 800;">+1,88</td>
+                      </tr>
+                      <tr>
+                        <td>Kemudahan menemukan riwayat</td>
+                        <td class="num-cell">1,63</td>
+                        <td class="num-cell">4,50</td>
+                        <td class="num-cell" style="color: var(--success-accent); font-weight: 800;">+2,87</td>
+                      </tr>
+                      <tr>
+                        <td>Kemudahan memeriksa data</td>
+                        <td class="num-cell">2,00</td>
+                        <td class="num-cell">4,75</td>
+                        <td class="num-cell" style="color: var(--success-accent); font-weight: 800;">+2,75</td>
+                      </tr>
+                      <tr>
+                        <td>Kewajaran waktu proses</td>
+                        <td class="num-cell">2,00</td>
+                        <td class="num-cell">4,25</td>
+                        <td class="num-cell" style="color: var(--success-accent); font-weight: 800;">+2,25</td>
+                      </tr>
+                      <tr>
+                        <td>Kesesuaian dengan kebutuhan</td>
+                        <td class="num-cell">2,00</td>
+                        <td class="num-cell">4,63</td>
+                        <td class="num-cell" style="color: var(--success-accent); font-weight: 800;">+2,63</td>
+                      </tr>
+                      <tr style="background: var(--sky-50); font-weight: 800;">
+                        <td><strong>RATA-RATA TOTAL</strong></td>
+                        <td class="num-cell">2,13</td>
+                        <td class="num-cell">4,50</td>
+                        <td class="num-cell" style="color: var(--blue-600); font-weight: 900;">+2,37</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="notice-box info" style="margin-top: 10px;">
+                  <strong>Catatan Wajib:</strong> Skala 1–5. Data berasal dari kuesioner 8 responden pegawai Kantor Desa Way Galih (P01–P08). Peningkatan angka merupakan perbandingan deskriptif, bukan bukti hubungan kausalitas murni.
+                </div>
+
+                <div class="grid-2" style="margin-top: 10px; gap: 10px;">
+                  <div class="card card-alt" style="padding: 10px 12px;">
+                    <div style="font-size: 10px; font-weight: 800; color: var(--text-muted); letter-spacing: 0.05em;">PERUBAHAN TERBESAR</div>
+                    <div style="font-size: 15px; font-weight: 900; color: var(--success-accent); font-family: var(--font-mono); margin-top: 2px;">+2,87</div>
+                    <div style="font-size: 10.5px; color: var(--text-muted);">Kemudahan menemukan riwayat</div>
+                  </div>
+                  <div class="card card-alt" style="padding: 10px 12px;">
+                    <div style="font-size: 10px; font-weight: 800; color: var(--text-muted); letter-spacing: 0.05em;">PERUBAHAN TERKECIL</div>
+                    <div style="font-size: 15px; font-weight: 900; color: var(--blue-600); font-family: var(--font-mono); margin-top: 2px;">+1,87</div>
+                    <div style="font-size: 10.5px; color: var(--text-muted);">Kemudahan proses</div>
+                  </div>
+                </div>
+
+                <div class="card card-alt" style="padding: 10px 12px; margin-top: 10px;">
+                  <div style="font-size: 10px; font-weight: 800; color: var(--text-muted); letter-spacing: 0.05em;">CARA MEMBACA GRAFIK</div>
+                  <div style="font-size: 11px; color: var(--text-secondary); line-height: 1.45; margin-top: 3px;">
+                    Enam indikator yang sama diukur dua kali dengan kuesioner identik. Selisih rata-rata dihitung deskriptif (sesudah − sebelum) pada skala Likert 1–5, tanpa uji signifikansi statistik.
+                  </div>
+                </div>
+
+                <a href="https://docs.google.com/spreadsheets/d/1EnbLGMZVNjpKUBsXF4WNafqzEnweA5T-OyyZVELQ1xg/edit?usp=sharing"
+                   class="data-link-row" target="_blank" rel="noopener noreferrer"
+                   title="Buka spreadsheet bukti post-test (Google Sheets)">
+                  <span class="dlr-icon">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
+                  </span>
+                  <span class="dlr-text">
+                    <span class="dlr-title">Lampiran Bukti Post-Test</span>
+                    <span class="dlr-sub">Spreadsheet respons kuesioner 8 responden · Google Sheets</span>
+                  </span>
+                  <span class="dlr-cta">
+                    Buka
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Gambar 2. Hasil Evaluasi Before-After</span>
+            </div>
+            <div class="slide-footer-num">Slide 10 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 11 — PENERIMAAN PENGGUNA
+             =================================================================== -->
+        <section class="slide" id="slide-11" data-slide="11" data-title="Penerimaan Pengguna">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Evaluasi Pengguna</span>
+              <h2 class="slide-title">Penerimaan Pengguna</h2>
+              <p class="slide-subtitle">Partisipasi mitra, umpan balik kualitatif, dan tindak lanjut perbaikan</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Umpan Balik Mitra</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body s11-body">
+            <div class="grid-2 s11-metrics" style="margin-bottom: 14px;">
+              <div class="metric-tile">
+                <div class="metric-big">8 Responden</div>
+                <div class="metric-label">Dataset Evaluasi</div>
+                <div class="metric-sub">Pegawai Kantor Desa</div>
+              </div>
+              <div class="metric-tile">
+                <div class="metric-big">4,50 / 5</div>
+                <div class="metric-label">Rata-Rata Post-Test</div>
+                <div class="metric-sub"></div>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="card">
+                <div class="card-title-sm" style="color: var(--blue-600);">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  Respons Responden 
+                </div>
+                <div class="quote-card" style="margin-top: 8px;">
+                  "Pada kondisi awal sebelum ada web, kami sangat kesulitan bila harus membuka riwayat absensi lampau di buku. Setelah memakai sistem ini, fitur scan QR kantor sangat praktis dan mempercepat pencatatan presensi tanpa antre."
+                </div>
+                <div style="font-size: 11.5px; color: var(--text-secondary); margin-top: 8px;">
+                  • <strong>Pre-test:</strong> Kesulitan menemukan riwayat absensi manual.<br>
+                  • <strong>Post-test:</strong> Fitur QR dinilai sangat membantu; memberikan skor sempurna 5/5 dan tidak melaporkan hambatan alur.
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-title-sm" style="color: var(--navy-800);">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  Umpan Balik Teknis & Tindak Lanjut
+                </div>
+                <div style="font-size: 12px; color: var(--text-secondary); margin-top: 8px; line-height: 1.5;">
+                  <strong style="color: var(--text-primary);">Temuan Lapangan:</strong> Alur scan dinilai mudah, namun pemuatan koordinat lokasi (GPS lock) terkadang lambat saat sinyal seluler di dalam Balai Desa melemah.<br><br>
+                  <strong style="color: var(--success-accent);">Tindak Lanjut Sistem:</strong> Menambahkan indikator status sinyal GPS yang komunikatif serta tombol <em>"Coba Lagi" (retry)</em> otomatis agar pegawai tidak perlu me-refresh halaman web secara manual.
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="margin-top: 12px; padding: 12px 16px;">
+              <div class="card-title-sm" style="color: var(--navy-800);">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+                Saran Responden  &amp; Rencana Tindak Lanjut
+              </div>
+              <div class="grid-3" style="margin-top: 8px; gap: 10px;">
+                <div style="font-size: 11.5px; color: var(--text-secondary); line-height: 1.45;">
+                  <strong style="color: var(--blue-600);">Fitur yang disorot:</strong> pemindaian QR, riwayat presensi, dan dashboard admin dinilai paling membantu alur kerja harian.
+                </div>
+                <div style="font-size: 11.5px; color: var(--text-secondary); line-height: 1.45;">
+                  <strong style="color: var(--blue-600);">Usulan perbaikan:</strong> panduan penggunaan singkat untuk pegawai baru dan penyempurnaan tampilan antarmuka.
+                </div>
+                <div style="font-size: 11.5px; color: var(--text-secondary); line-height: 1.45;">
+                  <strong style="color: var(--blue-600);">Sifat data:</strong> masukan dikumpulkan dari kuesioner 8 responden pegawai kantor desa pada sesi uji 23 November 2026.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Penerimaan Pengguna Desa Way Galih</span>
+            </div>
+            <div class="slide-footer-num">Slide 11 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 12 — CAPAIAN TERHADAP TARGET SDGS
+             =================================================================== -->
+        <section class="slide" id="slide-12" data-slide="12" data-title="Capaian terhadap Target SDGs">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Evaluasi Capaian</span>
+              <h2 class="slide-title">Capaian terhadap Target SDGs</h2>
+              <p class="slide-subtitle">Perbandingan janji proposal dengan hasil pengujian nyata black-box testing</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Indikator 16.6.2.(a)</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body">
+            <div class="scenario-summary-bar">
+              <div class="scenario-segment pass">
+                <span class="seg-num">27</span>
+                <span class="seg-meta">
+                  <span class="seg-label">Lulus (PASS)</span>
+                  <span class="seg-sub">87,1% · fungsi utama berjalan</span>
+                </span>
+              </div>
+              <div class="scenario-segment fail">
+                <span class="seg-num">3</span>
+                <span class="seg-meta">
+                  <span class="seg-label">Gagal (FAIL)</span>
+                  <span class="seg-sub">9,7% · lihat penjelasan</span>
+                </span>
+              </div>
+              <div class="scenario-segment blocked">
+                <span class="seg-num">1</span>
+                <span class="seg-meta">
+                  <span class="seg-label">Terhambat (BLOCKED)</span>
+                  <span class="seg-sub">3,2% · fitur belum tersedia</span>
+                </span>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table class="styled-table">
+                <thead>
+                  <tr>
+                    <th>Indikator</th>
+                    <th>Target Proposal</th>
+                    <th>Hasil Nyata Lapangan</th>
+                    <th>Status Capaian</th>
+                    <th>Penjelasan Kendala / Evaluasi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="2" style="font-weight: 800; color: var(--blue-600); vertical-align: top;">
+                      16.6.2.(a)
+                    </td>
+                    <td>
+                      Tersedia sistem absensi digital QR Code + GPS yang dipakai staf desa dengan pencatatan terintegrasi.
+                    </td>
+                    <td>
+                      Sistem dipakai aparatur desa; <strong>27 dari 31 skenario</strong> <em>black-box testing</em> berhasil lulus.
+                    </td>
+                    <td><span class="badge badge-warning">Tercapai Sebagian</span></td>
+                    <td style="font-size: 11.5px; line-height: 1.4;">
+                      3 skenario <strong>FAIL</strong>: (1) Pencarian tabel whitelist belum dinamis, (2) Penonaktifan akun tidak langsung me-logout sesi aktif, (3) Pengaturan jam kerja belum tersinkron otomatis.<br>
+                      1 skenario <strong>BLOCKED</strong>: Fitur edit data profil pegawai belum tersedia di frontend.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Verifikasi lokasi dan data riwayat serta rekapitulasi bagi pihak desa.
+                    </td>
+                    <td>
+                      Validasi radius Balai Desa (100 m) aktif; riwayat dan rekap dapat diekspor admin.
+                    </td>
+                    <td><span class="badge badge-success">Tercapai</span></td>
+                    <td style="font-size: 11.5px;">
+                      Radius final ditetapkan berdasarkan hasil kalibrasi uji lapangan bersama operator desa.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="notice-box info" style="margin-top: 12px;">
+              <strong>Pernyataan Kritis:</strong> Capaian ini dinilai sebagai luaran langsung sistem perangkat lunak (output fungsional), bukan klaim dampak jangka panjang menyeluruh terhadap efektivitas birokrasi pelayanan publik.
+            </div>
+
+            <div class="grid-2" style="margin-top: 12px;">
+              <div class="card" style="padding: 12px 14px; border-left: 4px solid var(--danger-accent);">
+                <div style="font-size: 11px; font-weight: 800; color: var(--danger-text); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">
+                  3 Skenario FAIL — Masalah yang Ditemukan
+                </div>
+                <ul class="point-list" style="gap: 5px; font-size: 11.5px;">
+                  <li>Pencarian whitelist belum berfungsi sesuai harapan.</li>
+                  <li>Penonaktifan akun belum langsung mengakhiri sesi aktif.</li>
+                  <li>Pengaturan jam kerja belum tersinkronisasi.</li>
+                </ul>
+              </div>
+
+              <div class="card" style="padding: 12px 14px; border-left: 4px solid var(--warning-accent);">
+                <div style="font-size: 11px; font-weight: 800; color: var(--warning-text); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">
+                  1 Skenario BLOCKED — Belum Dapat Diuji
+                </div>
+                <ul class="point-list" style="gap: 5px; font-size: 11.5px;">
+                  <li>Fitur pengeditan pegawai belum tersedia di antarmuka.</li>
+                  <li>Pengujian tidak dapat dilanjutkan sampai fitur diimplementasikan.</li>
+                  <li>Dicatat sebagai backlog pengembangan lanjutan.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="evidence-slot" style="margin-top: 12px;">
+              <div class="evidence-icon">📋</div>
+              <div class="evidence-text">
+                <strong>Lampiran bukti pengujian</strong>
+                https://s.itera.id/dokumen-testing-sistem-absensi-desa-way-galih
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Capaian SDGs 16.6.2.(a)</span>
+            </div>
+            <div class="slide-footer-num">Slide 12 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 13 — ANALISIS DAN KETERBATASAN
+             =================================================================== -->
+        <section class="slide" id="slide-13" data-slide="13" data-title="Analisis dan Keterbatasan">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Refleksi Kritis</span>
+              <h2 class="slide-title">Analisis dan Keterbatasan</h2>
+              <p class="slide-subtitle">Mengapa hasil evaluasi demikian dan pengakuan terbuka atas batasan penelitian</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Analisis Kritis</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body">
+            <div class="grid-2" style="height: 100%;">
+              <div class="card">
+                <div class="card-title-sm" style="color: var(--success-text);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                  Faktor Penyebab Perubahan
+                </div>
+                <ul class="point-list" style="margin-top: 10px;">
+                  <li><strong>Fitur Whitelist & Google Login:</strong> Membatasi akses presensi hanya untuk aparatur desa yang berhak.</li>
+                  <li><strong>Geofencing & Scan QR:</strong> Menghilangkan manipulasi kehadiran fisik di luar kantor Balai Desa.</li>
+                  <li><strong>Waktu Server NTP:</strong> Mencegah manipulasi waktu pada pengaturan jam internal perangkat HP pegawai.</li>
+                  <li><strong>Penyimpanan Digital:</strong> Rekapitulasi otomatis menggantikan hitung manual berlembar-lembar.</li>
+                  <li><strong>Faktor Eksternal:</strong> Antusiasme teknologi baru <em>(novelty effect)</em> dan pendampingan intensif mahasiswa selama uji coba.</li>
+                </ul>
+                <div class="notice-box info" style="margin-top: 12px;">
+                  <strong>Implikasi:</strong> Perubahan skor yang tinggi konsisten dengan kombinasi fitur verifikasi, namun belum dapat dipisahkan sepenuhnya dari efek pendampingan.
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-title-sm" style="color: var(--danger-accent);">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+                  Keterbatasan Evaluasi Lapangan
+                </div>
+                <ul class="point-list" style="margin-top: 10px;">
+                  <li><strong>Cakupan Pengguna:</strong> Hanya diuji pada 1 unit kantor desa, belum mencakup variasi desa lain.</li>
+                  <li><strong>Durasi Uji Singkat:</strong> Uji coba terbatas pada akhir proyek (~3 minggu), belum mencerminkan adopsi jangka panjang.</li>
+                  <li><strong>Tanpa Kelompok Kontrol:</strong> Evaluasi sebelum-sesudah tanpa pembanding murni dari faktor eksternal.</li>
+                  <li><strong>Batasan Teknis GPS:</strong> Validasi browser belum memitigasi <em>Fake GPS / Mock Location</em> di tingkat OS.</li>
+                  <li><strong>Ukuran Sampel Terbatas:</strong> Analisis 8 responden di satu kantor desa belum dapat digeneralisasi untuk populasi luas.</li>
+                </ul>
+                <div class="notice-box warning" style="margin-top: 12px;">
+                  <strong>Implikasi:</strong> Hasil yang positif sebaiknya dibaca sebagai indikasi kelayakan awal, bukan bukti keandalan dalam skala pemakaian yang lebih luas.
+                </div>
+              </div>
+            </div>
+
+            <div class="notice-box info" style="margin-top: 10px;">
+              <strong>Kekuatan Simpulan:</strong> Simpulan evaluasi ini <strong>cukup kuat</strong> untuk memvalidasi kelayakan fungsi teknis sistem, namun <strong>terbatas</strong> untuk mengklaim dampak jangka panjang terhadap reformasi tata kelola desa.
+            </div>
+
+            <div class="grid-3" style="margin-top: 12px;">
+              <div class="card card-alt" style="padding: 10px 12px;">
+                <div style="font-size: 10px; font-weight: 800; color: var(--text-muted); letter-spacing: 0.05em;">KUAT UNTUK</div>
+                <div style="font-size: 12px; font-weight: 700; margin-top: 2px;">Kelayakan fungsi teknis</div>
+                <div style="font-size: 10.5px; color: var(--text-muted);">Alur absensi, validasi lokasi, rekap</div>
+              </div>
+              <div class="card card-alt" style="padding: 10px 12px;">
+                <div style="font-size: 10px; font-weight: 800; color: var(--text-muted); letter-spacing: 0.05em;">LEMAH UNTUK</div>
+                <div style="font-size: 12px; font-weight: 700; margin-top: 2px;">Generalisasi antar-desa</div>
+                <div style="font-size: 10.5px; color: var(--text-muted);">Sampel satu kantor, durasi singkat</div>
+              </div>
+              <div class="card card-alt" style="padding: 10px 12px;">
+                <div style="font-size: 10px; font-weight: 800; color: var(--text-muted); letter-spacing: 0.05em;">TIDAK DIKLAIM</div>
+                <div style="font-size: 12px; font-weight: 700; margin-top: 2px;">Hubungan sebab-akibat</div>
+                <div style="font-size: 10.5px; color: var(--text-muted);">Tanpa kelompok pembanding</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Analisis & Keterbatasan</span>
+            </div>
+            <div class="slide-footer-num">Slide 13 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 14 — KENDALA DAN PELAJARAN
+             =================================================================== -->
+        <section class="slide" id="slide-14" data-slide="14" data-title="Kendala dan Pelajaran">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Refleksi Lapangan</span>
+              <h2 class="slide-title">Kendala dan Pelajaran</h2>
+              <p class="slide-subtitle">Tantangan yang dihadapi, langkah penanganan tim, dan pelajaran berharga yang diperoleh</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Manajemen Kendala</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body">
+            <div class="table-wrap">
+              <table class="styled-table">
+                <thead>
+                  <tr>
+                    <th style="width: 250px;">Kendala yang Terjadi</th>
+                    <th>Penanganan oleh Tim</th>
+                    <th>Pelajaran Berharga</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Perubahan timeline proyek</strong><br>
+                      <span style="font-size: 11px; color: var(--text-muted);">Perbedaan jadwal mahasiswa dengan agenda kedinasan kantor desa.</span>
+                    </td>
+                    <td>
+                      Komunikasi intensif berkala antara tim mahasiswa dan mitra serta koordinasi mingguan untuk fiksasi timeline kunjungan.
+                    </td>
+                    <td>
+                      Pentingnya menetapkan jadwal individu per minggu dan menyediakan alokasi waktu fleksibel <em>(buffer time)</em>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Kesalahan integrasi frontend & backend</strong><br>
+                      <span style="font-size: 11px; color: var(--text-muted);">Inkonsistensi struktur response JSON API dan state frontend.</span>
+                    </td>
+                    <td>
+                      Perbaikan kode bersama dan sinkronisasi kontrak endpoint API secara ketat antara developer React dan Laravel.
+                    </td>
+                    <td>
+                      Pentingnya diskusi aktif harian dan pembuatan dokumentasi API collection sejak awal fase pengembangan.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Akurasi GPS & potensi Fake GPS</strong><br>
+                      <span style="font-size: 11px; color: var(--text-muted);">Sinyal GPS indoor melemah dan kerentanan spoofing web browser.</span>
+                    </td>
+                    <td>
+                      Menyesuaikan toleransi radius kantor (100 m) dan merencanakan integrasi Progressive Web App (PWA).
+                    </td>
+                    <td>
+                      Sistem absensi berbasis web murni rentan manipulasi lokasi sehingga membutuhkan mekanisme verifikasi fisik ganda.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Belum ada fitur absensi jam pulang</strong><br>
+                      <span style="font-size: 11px; color: var(--text-muted);">Sistem MVP baru mencakup pencatatan kehadiran masuk pagi.</span>
+                    </td>
+                    <td>
+                      Mendefinisikan modul absensi jam pulang sebagai backlog prioritas tinggi pada rilis lanjutan.
+                    </td>
+                    <td>
+                      Pencatatan jam kepulangan mutlak diperlukan untuk menjaga integritas dan kedisiplinan kerja pegawai secara utuh.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="lesson-strip">
+              <div class="lesson-card">
+                <div class="lesson-icon">🗓️</div>
+                <div>
+                  <div class="lesson-title">Perencanaan Jadwal</div>
+                  <div class="lesson-desc">Jadwal per individu per minggu lebih realistis daripada target tim yang seragam.</div>
+                </div>
+              </div>
+              <div class="lesson-card">
+                <div class="lesson-icon">🔗</div>
+                <div>
+                  <div class="lesson-title">Kontrak Integrasi</div>
+                  <div class="lesson-desc">Dokumentasi endpoint sejak awal mencegah salah integrasi frontend–backend.</div>
+                </div>
+              </div>
+              <div class="lesson-card">
+                <div class="lesson-icon">🛡️</div>
+                <div>
+                  <div class="lesson-title">Batas Keamanan Web</div>
+                  <div class="lesson-desc">Validasi GPS browser bukan jaminan tunggal; perlu verifikasi fisik berlapis.</div>
+                </div>
+              </div>
+              <div class="lesson-card">
+                <div class="lesson-icon">⏱️</div>
+                <div>
+                  <div class="lesson-title">Kelengkapan Siklus</div>
+                  <div class="lesson-desc">Absensi masuk saja belum menutup kebutuhan integritas jam kerja pegawai.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Kendala & Pelajaran</span>
+            </div>
+            <div class="slide-footer-num">Slide 14 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 15 — KEBERLANJUTAN DAN SERAH TERIMA
+             =================================================================== -->
+        <section class="slide" id="slide-15" data-slide="15" data-title="Keberlanjutan dan Serah Terima">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Serah Terima</span>
+              <h2 class="slide-title">Keberlanjutan dan Serah Terima</h2>
+              <p class="slide-subtitle">Rencana keberlanjutan operasional, penanggung jawab mitra, dan komitmen pemeliharaan</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Handover Plan</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body">
+            <div class="table-wrap">
+              <table class="styled-table">
+                <thead>
+                  <tr>
+                    <th style="width: 170px;">Aspek Keberlanjutan</th>
+                    <th>Rencana Pelaksanaan</th>
+                    <th style="width: 250px;">Penanggung Jawab</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Pengelolaan Harian</strong></td>
+                    <td>Pengelolaan data pegawai desa, konfigurasi whitelist email, persetujuan pengajuan izin, dan pemantauan harian.</td>
+                    <td><strong>Pak Sadewo</strong><br><span style="font-size: 11px; color: var(--text-muted);">Operator Balai Desa Way Galih</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Pemeliharaan Teknis</strong></td>
+                    <td>Dukungan teknis, perbaikan bug darurat, dan konsultasi pengoperasian sistem maksimal sampai 23 Desember 2026.</td>
+                    <td><strong>Maulana Muhammad Rizki</strong><br><span style="font-size: 11px; color: var(--text-muted);">Project Manager Kelompok 4</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Estimasi Biaya Operasional</strong></td>
+                    <td>Alokasi biaya operasional (hosting cloud server dan domain desa): <strong>Rp620.000</strong>.</td>
+                    <td><strong>Pemerintah Desa Way Galih</strong><br><span style="font-size: 11px; color: var(--text-muted);">Alokasi Anggaran Desa</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Pelatihan Pengguna Baru</strong></td>
+                    <td>Pelatihan bagi admin dan staf kantor desa baru menggunakan buku panduan manual <em>(User Guide)</em>.</td>
+                    <td><strong>Pak Sadewo</strong><br><span style="font-size: 11px; color: var(--text-muted);">Operator Balai Desa Way Galih</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Serah Terima Produk</strong></td>
+                    <td>Rencana sosialisasi sistem, penyerahan akun master admin, dokumen user manual, dan penandatanganan berita acara pada <strong>23 November 2026</strong>.</td>
+                    <td><strong>Maulana Muhammad Rizki & Pak Sadewo</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="notice-box info" style="margin-top: 14px;">
+              <strong>Komitmen Transparan:</strong> Rencana serah terima disusun berbasis nama penanggung jawab riil di pihak desa. Tidak memalsukan stempel atau dokumen yang belum resmi diterbitkan.
+            </div>
+
+            <div class="handover-timeline">
+              <div class="ht-step done">
+                <div class="ht-dot">1</div>
+                <div class="ht-date">23 Nov 2026</div>
+                <div class="ht-title">Serah Terima Produk</div>
+                <div class="ht-desc">Sosialisasi sistem, penyerahan akun master admin, dan dokumen user manual.</div>
+              </div>
+              <div class="ht-step done">
+                <div class="ht-dot">2</div>
+                <div class="ht-date">24 Nov – 23 Des 2026</div>
+                <div class="ht-title">Masa Pemeliharaan</div>
+                <div class="ht-desc">Pengajuan masalah website dilayani maksimal sampai 23 Desember 2026.</div>
+              </div>
+              <div class="ht-step next">
+                <div class="ht-dot">3</div>
+                <div class="ht-date">Setelah 23 Des 2026</div>
+                <div class="ht-title">Alih Kelola Penuh</div>
+                <div class="ht-desc">Pengelolaan harian dan pelatihan pengguna baru sepenuhnya oleh operator desa.</div>
+              </div>
+              <div class="ht-step next">
+                <div class="ht-dot">4</div>
+                <div class="ht-date">Berkelanjutan</div>
+                <div class="ht-title">Pengembangan Lanjutan</div>
+                <div class="ht-desc">Pemenuhan rekomendasi prioritas oleh pengembang lanjutan.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Rencana Keberlanjutan</span>
+            </div>
+            <div class="slide-footer-num">Slide 15 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 16 — REKOMENDASI DAN TINDAK LANJUT
+             =================================================================== -->
+        <section class="slide" id="slide-16" data-slide="16" data-title="Rekomendasi dan Tindak Lanjut">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Rencana Lanjutan</span>
+              <h2 class="slide-title">Rekomendasi dan Tindak Lanjut</h2>
+              <p class="slide-subtitle">Langkah perbaikan strategis yang diurutkan menurut prioritas dan dampak bagi mitra</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Rekomendasi</span>
+            </div>
+          </div>
+
+
+          <div class="slide-body" style="gap: 12px;">
+            <div class="rec-card p1">
+              <div class="rec-num-badge">01</div>
+              <div class="rec-body">
+                <h4>
+                  <span>Perkuat Validasi Anti-Kecurangan (Mitigasi Fake GPS)</span>
+                  <span class="badge badge-danger">Prioritas 1 · Dampak Tinggi</span>
+                </h4>
+                <p>
+                  <strong>Dasar Evaluasi:</strong> Keterbatasan validasi GPS browser umum yang rentan dimanipulasi dengan software mock location.<br>
+                  <strong>Tindak Lanjut:</strong> Migrasi sistem ke Progressive Web App (PWA) dengan deteksi mock provider atau menerapkan <em>Dynamic Rotating QR Code</em> (refresh otomatis per 30 detik pada layar kantor).<br>
+                  <strong>Pelaksana:</strong> Pengembang sistem lanjutan.
+                </p>
+              </div>
+            </div>
+
+            <div class="rec-card p2">
+              <div class="rec-num-badge">02</div>
+              <div class="rec-body">
+                <h4>
+                  <span>Tambahkan Fitur Absensi Jam Kepulangan (Check-out)</span>
+                  <span class="badge badge-warning">Prioritas 2 · Dampak Tinggi</span>
+                </h4>
+                <p>
+                  <strong>Dasar Evaluasi:</strong> Rilis MVP baru mengakomodasi absensi masuk pagi hari sehingga jam kerja efektif harian belum terhitung utuh.<br>
+                  <strong>Tindak Lanjut:</strong> Mengembangkan jendela waktu absensi pulang sore hari dengan validasi lokasi serupa dan kalkulasi akumulasi jam kerja bulanan.<br>
+                  <strong>Pelaksana:</strong> Pengembang sistem lanjutan & Tim Pengembang Kelompok 4.
+                </p>
+              </div>
+            </div>
+
+            <div class="rec-card p3">
+              <div class="rec-num-badge">03</div>
+              <div class="rec-body">
+                <h4>
+                  <span>Sempurnakan Sinkronisasi Jam Kerja & Manajemen Akun</span>
+                  <span class="badge badge-blue">Prioritas 3 · Dampak Sedang</span>
+                </h4>
+                <p>
+                  <strong>Dasar Evaluasi:</strong> 3 skenario gagal pada pengujian black-box (pencarian whitelist, penonaktifan sesi login, sinkronisasi jam dinamis).<br>
+                  <strong>Tindak Lanjut:</strong> Menyempurnakan query pencarian whitelist di backend, mengaktifkan instant token revocation pada Laravel Sanctum saat akun dinonaktifkan, dan sinkronisasi otomatis zona waktu server.<br>
+                  <strong>Pelaksana:</strong> Backend Developer & Admin Desa.
+                </p>
+              </div>
+            </div>
+
+            <div class="roadmap-scale">
+              <div class="rs-card high">
+                <div class="rs-head">
+                  <span class="rs-label">Dampak · Prioritas 1</span>
+                  <span class="badge badge-danger">Tinggi</span>
+                </div>
+                <div class="rs-bar"><div class="rs-fill" style="width: 92%;"></div></div>
+                <div class="rs-desc">Mitigasi Fake GPS menyentuh keabsahan data kehadiran secara langsung.</div>
+              </div>
+              <div class="rs-card med">
+                <div class="rs-head">
+                  <span class="rs-label">Dampak · Prioritas 2</span>
+                  <span class="badge badge-warning">Tinggi</span>
+                </div>
+                <div class="rs-bar"><div class="rs-fill" style="width: 80%;"></div></div>
+                <div class="rs-desc">Absensi jam pulang melengkapi siklus perhitungan jam kerja harian.</div>
+              </div>
+              <div class="rs-card low">
+                <div class="rs-head">
+                  <span class="rs-label">Dampak · Prioritas 3</span>
+                  <span class="badge badge-blue">Sedang</span>
+                </div>
+                <div class="rs-bar"><div class="rs-fill" style="width: 55%;"></div></div>
+                <div class="rs-desc">Perbaikan akun &amp; jam kerja menutup tiga temuan FAIL black-box.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Rekomendasi Berbasis Dampak</span>
+            </div>
+            <div class="slide-footer-num">Slide 16 / 17</div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             SLIDE 17 — PENUTUP
+             =================================================================== -->
+        <section class="slide" id="slide-17" data-slide="17" data-title="Penutup">
+          <div class="slide-header">
+            <div class="slide-title-group">
+              <span class="slide-category"><span class="dot"></span> Sesi Akhir</span>
+              <h2 class="slide-title">Terima Kasih</h2>
+              <p class="slide-subtitle">Sesi tanya jawab, diskusi akademik, dan tautan akses luaran proyek</p>
+            </div>
+            <div class="slide-brand">
+              <div class="brand-logos">
+                <img src="assets/logos/logo-itera.png" alt="ITERA" class="brand-logo-img">
+                <img src="assets/logos/logo-lampung-selatan.png" alt="Lampung Selatan" class="brand-logo-img">
+              </div>
+              <span class="brand-badge">Sesi Diskusi</span>
+            </div>
+          </div>
+
+          <div class="slide-body" style="justify-content: space-between;">
+            <div class="card card-alt" style="padding: 16px 20px; text-align: center;">
+              <h3 style="font-size: 20px; font-weight: 800; color: var(--navy-900);">Pertanyaan dan Diskusi</h3>
+              <p style="font-size: 13px; color: var(--text-secondary); margin-top: 4px;">
+                Kami mengundang masukan, saran, dan pertanyaan dari Dosen Pengampu serta rekan-rekan mahasiswa.
+              </p>
+            </div>
+
+            <div>
+              <div style="font-size: 12px; font-weight: 700; color: var(--navy-700); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;">
+                Tautan Akses Luaran Proyek
+              </div>
+              <div class="closing-links-grid">
+                <a href="#" class="link-btn-card" onclick="alert('Placeholder Repositori Kode Sumber'); return false;">
+                  <div class="link-info">
+                    <div class="link-icon-box">GH</div>
+                    <div>
+                      <div class="link-text-title">Repositori Kode Sumber</div>
+                      <div class="link-text-url">https://github.com/maulmuhriz/absensi-desa-way-galih.git</div>
+                    </div>
+                  </div>
+                  <span class="badge badge-blue"></span>
+                </a>
+
+                <a href="#" class="link-btn-card" onclick="alert('Placeholder Folder Luaran Google Drive'); return false;">
+                  <div class="link-info">
+                    <div class="link-icon-box" style="background: #e0f2fe; color: #0284c7;">GD</div>
+                    <div>
+                      <div class="link-text-title">Folder Luaran Lengkap</div>
+                      <div class="link-text-url">https://s.itera.id/RA_Kelompok4</div>
+                    </div>
+                  </div>
+                  <span class="badge badge-warning"></span>
+                </a>
+
+                <a href="#" class="link-btn-card" onclick="alert('Placeholder Video Demonstrasi'); return false;">
+                  <div class="link-info">
+                    <div class="link-icon-box" style="background: #fee2e2; color: #dc2626;">YT</div>
+                    <div>
+                      <div class="link-text-title">Video Logbook & Demonstrasi</div>
+                      <div class="link-text-url">[Tautan Video Demonstrasi]</div>
+                    </div>
+                  </div>
+                  <span class="badge badge-warning">Placeholder</span>
+                </a>
+
+                <a href="#" class="link-btn-card" onclick="alert('Placeholder Publikasi'); return false;">
+                  <div class="link-info">
+                    <div class="link-icon-box" style="background: #ecfdf5; color: #059669;">DOC</div>
+                    <div>
+                      <div class="link-text-title">Artikel Publikasi & Naskah Ilmiah</div>
+                      <div class="link-text-url">https://medium.com/@chesyamargarethadeto/pengembangan-sistem-absensi-pegawai-berbasis-web-di-kantor-desa-way-galih-15a30adca971?sharedUserId=chesyamargarethadeto</div>
+                    </div>
+                  </div>
+                  <span class="badge badge-warning"></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="grid-3" style="margin-top: 12px;">
+              <div class="card card-alt" style="padding: 10px 12px;">
+                <div style="font-size: 10px; font-weight: 800; color: var(--text-muted); letter-spacing: 0.05em;">KODE SUMBER</div>
+                <div style="font-size: 12px; font-weight: 700; margin-top: 2px;">React 18 + Laravel 13</div>
+                <div style="font-size: 10.5px; color: var(--text-muted);">PostgreSQL · Tailwind CSS</div>
+              </div>
+              <div class="card card-alt" style="padding: 10px 12px;">
+                <div style="font-size: 10px; font-weight: 800; color: var(--text-muted); letter-spacing: 0.05em;">SERAH TERIMA</div>
+                <div style="font-size: 12px; font-weight: 700; margin-top: 2px;">23 November 2026</div>
+                <div style="font-size: 10.5px; color: var(--text-muted);">Operator: Pak Sadewo</div>
+              </div>
+              <div class="card card-alt" style="padding: 10px 12px;">
+                <div style="font-size: 10px; font-weight: 800; color: var(--text-muted); letter-spacing: 0.05em;">PEMELIHARAAN</div>
+                <div style="font-size: 12px; font-weight: 700; margin-top: 2px;">s.d. 23 Desember 2026</div>
+                <div style="font-size: 10.5px; color: var(--text-muted);">Kontak: Maulana M. Rizki</div>
+              </div>
+            </div>
+
+            <div class="grid-2" style="margin-top: 10px; font-size: 11.5px; color: var(--text-muted);">
+              <div>
+                <strong>Kontak Narahubung:</strong> Maulana Muhammad Rizki (Project Manager)<br>
+                Email: <span style="font-family: var(--font-mono); color: var(--blue-600);">maulana.124140008@student.itera.ac.id</span>
+              </div>
+              <div style="text-align: right;">
+                Kapita Selekta IF25-41031 · S1 Teknik Informatika<br>
+                Institut Teknologi Sumatera · 2026
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-footer">
+            <div class="slide-footer-meta">
+              <span>Kapita Selekta IF25-41031</span>
+              <span class="sep">•</span>
+              <span>Kelompok 4</span>
+              <span class="sep">•</span>
+              <span>Penutup & Tanya Jawab</span>
+            </div>
+            <div class="slide-footer-num">Slide 17 / 17</div>
+          </div>
+        </section>
+
+      </div> <!-- /#canvas -->
+    </div> <!-- /#frame -->
+  </main> <!-- /#stage -->
+
+  <!-- Bar panduan akademik (di luar kanvas slide) -->
+  <div id="guideBar" role="status" aria-live="polite">
+    <span class="gb-icon">💡</span>
+    <span id="guideBarText">Panduan akademik slide ini akan tampil di sini.</span>
+  </div>
+
+  <!-- =========================================================================
+       TOOLBAR PRESENTASI
+       ========================================================================= -->
+  <nav id="toolbar" role="toolbar" aria-label="Kontrol Presentasi">
+    <div class="tb-group">
+      <button class="tb-btn tb-btn-icon" id="btnFirst" title="Slide Pertama (Home)" aria-label="Slide Pertama">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="11 17 6 12 11 7"/><polyline points="18 17 13 12 18 7"/></svg>
+      </button>
+      <button class="tb-btn tb-btn-icon" id="btnPrev" title="Slide Sebelumnya (←)" aria-label="Slide Sebelumnya">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <span class="slide-counter" id="slideCounter">1 / 17</span>
+      <button class="tb-btn tb-btn-icon" id="btnNext" title="Slide Berikutnya (→ / Spasi)" aria-label="Slide Berikutnya">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <div class="tb-sep"></div>
+
+    <div class="tb-group">
+      <button class="tb-btn" id="btnOverview" title="Ikhtisar Semua Slide (G)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span>Ikhtisar</span>
+      </button>
+      <button class="tb-btn" id="btnNotes" title="Naskah & Rubrik Akademik (N)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span>Naskah</span>
+      </button>
+      <button class="tb-btn" id="btnGuide" title="Tampilkan Panduan Akademik (P)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <span>Panduan</span>
+      </button>
+      <button class="tb-btn" id="btnTheme" title="Ganti Tema Terang/Gelap (T)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <span>Tema</span>
+      </button>
+    </div>
+
+    <div class="tb-sep"></div>
+
+    <div class="tb-group">
+      <button class="tb-btn" id="btnTimer" title="Mulai / Jeda Timer Presentasi">
+        <span class="timer-display" id="timerDisplay">00:00</span>
+      </button>
+      <button class="tb-btn tb-btn-icon" id="btnTimerReset" title="Reset Timer">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+      </button>
+      <button class="tb-btn" id="btnFull" title="Layar Penuh (F)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        <span>Layar Penuh</span>
+      </button>
+      <button class="tb-btn tb-btn-icon" id="btnHelp" title="Bantuan Pintasan Papan Tombol (?)">
+        <span style="font-weight: 800; font-size: 13px;">?</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       DRAWER NASKAH / SPEAKER NOTES (N)
+       ========================================================================= -->
+  <aside id="notesDrawer" aria-label="Catatan Pembicara & Panduan Rubrik">
+    <div class="notes-header">
+      <div class="notes-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <span>Naskah & Panduan Pembicara</span>
+      </div>
+      <button class="tb-btn tb-btn-icon" id="btnNotesClose" aria-label="Tutup Catatan">✕</button>
+    </div>
+    <div class="notes-body">
+      <div id="notesSlideNumber" style="font-size: 11.5px; font-weight: 800; color: var(--blue-600); text-transform: uppercase;">
+        Slide 1: Cover
+      </div>
+      <div id="notesScript" style="margin-top: 8px;">
+        <!-- Diisi dinamis oleh script.js -->
+      </div>
+      <div class="notes-rubric-card" id="notesRubric">
+        <!-- Rubrik template diisi oleh script.js -->
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       MODAL IKHTISAR SLIDE (G)
+       ========================================================================= -->
+  <div class="modal-overlay" id="overviewModal">
+    <div class="overview-modal">
+      <div class="modal-header">
+        <div class="modal-title">Ikhtisar Semua Slide (17 Slide)</div>
+        <button class="tb-btn tb-btn-icon" id="btnOverviewClose">✕</button>
+      </div>
+      <div class="overview-grid" id="overviewGrid">
+        <!-- Diisi dinamis oleh script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL BANTUAN SHORTCUT (?)
+       ========================================================================= -->
+  <div class="modal-overlay" id="helpModal">
+    <div class="help-modal">
+      <div class="modal-header" style="padding: 0 0 12px 0; margin-bottom: 8px;">
+        <div class="modal-title">Pintasan Papan Tombol (Keyboard)</div>
+        <button class="tb-btn tb-btn-icon" id="btnHelpClose">✕</button>
+      </div>
+      <table class="shortcuts-table">
+        <tbody>
+          <tr><td><kbd>→</kbd> / <kbd>Space</kbd> / <kbd>PageDown</kbd></td><td>Slide berikutnya</td></tr>
+          <tr><td><kbd>←</kbd> / <kbd>PageUp</kbd></td><td>Slide sebelumnya</td></tr>
+          <tr><td><kbd>Home</kbd></td><td>Kembali ke slide pertama</td></tr>
+          <tr><td><kbd>End</kbd></td><td>Lompat ke slide terakhir</td></tr>
+          <tr><td><kbd>F</kbd></td><td>Layar penuh (fullscreen)</td></tr>
+          <tr><td><kbd>G</kbd></td><td>Buka / tutup ikhtisar slide</td></tr>
+          <tr><td><kbd>N</kbd></td><td>Buka / tutup panel naskah pembicara</td></tr>
+          <tr><td><kbd>P</kbd></td><td>Tampilkan / sembunyikan panduan akademik</td></tr>
+          <tr><td><kbd>T</kbd></td><td>Beralih tema terang / gelap</td></tr>
+          <tr><td><kbd>?</kbd></td><td>Tampilkan bantuan ini</td></tr>
+          <tr><td><kbd>Esc</kbd></td><td>Tutup modal / keluar layar penuh</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

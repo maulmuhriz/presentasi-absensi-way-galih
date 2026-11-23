@@ -1,0 +1,21 @@
+# Sistem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Berkas sementara / hasil uji render
+_shot*.html
+_shotd*.html
+_s*.html
+_m.html
+*.log
+
+# Dependensi (jika nanti ditambahkan)
+node_modules/
+package-lock.json
