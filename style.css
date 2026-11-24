@@ -3115,3 +3115,46 @@ kbd {
 [data-theme="dark"] .dlr-cta {
   color: var(--blue-400);
 }
+
+/* Kartu tautan yang belum memiliki URL tujuan */
+.link-btn-card.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+  border-style: dashed;
+}
+
+.link-btn-card.is-disabled:hover {
+  border-color: var(--border-light);
+  background: var(--surface);
+  transform: none;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="dark"] .link-btn-card.is-disabled:hover {
+  background: var(--surface);
+}
+
+/* Slide 09 — rapatkan agar tabel tidak terpotong setelah penambahan tautan */
+.s9-body > .table-wrap {
+  flex-shrink: 0;
+}
+
+.s9-body > .grid-2 {
+  margin-top: 10px !important;
+}
+
+.s9-body .styled-table td {
+  padding: 7px 14px;
+}
+
+.s9-body .styled-table th {
+  padding: 7px 14px;
+}
+
+.s9-body > .grid-2 {
+  flex-shrink: 0;
+}
+
+.s9-body .chip-list {
+  flex-shrink: 0;
+}
