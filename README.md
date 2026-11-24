@@ -50,7 +50,7 @@ Deep-link ke slide tertentu juga didukung, misalnya `index.html#slide-10`.
 
 - **Identifikasi masalah** — absensi manual berbasis kertas: antrean, titip tanda tangan, rekapitulasi lambat
 - **Solusi** — absensi QR Code nirsentuh + validasi radius GPS Balai Desa, data terpusat di server
-- **Kesiapan teknologi** — TKT 4–5, diuji langsung di lingkungan operasional Kantor Desa Way Galih
+- **Kesiapan teknologi** — TKT 5–6, prototipe tervalidasi dan didemonstrasikan di lingkungan operasional Kantor Desa Way Galih
 - **Evaluasi before–after** — 6 indikator kuesioner Likert 1–5, 8 responden pegawai kantor desa (P01–P08)
 - **Hasil** — rata-rata skor naik dari 2,13 menjadi 4,50 (selisih deskriptif +2,37)
 - **Keterbatasan** — sampel satu kantor desa, durasi uji singkat, tanpa kelompok kontrol

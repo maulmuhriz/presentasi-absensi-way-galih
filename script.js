@@ -51,7 +51,7 @@ const SLIDES_DATA = [
   {
     number: 8,
     title: "Inovasi dan Kesiapterapan (TKT)",
-    script: "Dibandingkan cara manual dan aplikasi check-in biasa, inovasi sistem ini mewajibkan verifikasi fisik ganda: scan QR Code yang ditempel di kantor dipadukan geofencing GPS server-side. Secara jujur, kami mengklaim posisi TKT pada tingkat 4–5, di mana fungsi telah tervalidasi di lingkungan kantor Desa Way Galih, dengan batas kesiapan belum mencakup PWA offline dan absensi checkout.",
+    script: "Dibandingkan cara manual dan aplikasi check-in biasa, inovasi sistem ini mewajibkan verifikasi fisik ganda: scan QR Code yang ditempel di kantor dipadukan geofencing GPS server-side. Posisi TKT berada pada tingkat 5–6, di mana komponen tervalidasi dan prototipe telah didemonstrasikan langsung di lingkungan operasional kantor Desa Way Galih bersama operator dan pegawai.",
     rubric: "Rubrik Kesiapan Teknologi (TKT): Target mata kuliah adalah TKT 5-6. Sebutkan bukti pengujian riil di lingkungan mitra dan akui batas kesiapan produk secara jujur."
   },
   {

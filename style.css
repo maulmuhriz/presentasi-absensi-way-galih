@@ -3158,3 +3158,75 @@ kbd {
 .s9-body .chip-list {
   flex-shrink: 0;
 }
+
+/* Slide 08 — rapatkan agar tautan dokumentasi tidak memotong isi */
+.s8-body > * {
+  flex-shrink: 0;
+}
+
+.s8-body .tkt-box {
+  margin-top: 10px;
+  padding: 10px 16px;
+}
+
+.s8-body .tkt-scale {
+  margin-top: 10px;
+}
+
+.s8-body > .grid-2 {
+  margin-top: 10px !important;
+}
+
+.s8-body .notice-box {
+  font-size: 11px;
+  padding: 7px 10px;
+  line-height: 1.4;
+}
+
+.s8-body .evidence-slot-photo {
+  margin-top: 10px !important;
+  padding: 6px;
+  grid-template-columns: 200px 1fr auto;
+  gap: 14px;
+}
+
+.s8-body .evidence-photo {
+  width: 200px;
+  height: 132px;
+}
+
+.s8-body .evidence-slot-photo .evidence-text {
+  font-size: 11px;
+}
+
+.s8-body .evidence-meta {
+  margin-top: 6px;
+}
+
+.s8-body .evidence-stat {
+  min-width: 96px;
+  padding: 6px 10px;
+}
+
+.s8-body > .data-link-row {
+  margin-top: 8px;
+}
+
+/* Slide 08 — badge TKT jangan terpecah dua baris */
+.s8-body .tkt-badge-big {
+  font-size: 22px;
+  white-space: nowrap;
+}
+
+.s8-body .tkt-level {
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.s8-body .tkt-status-pill {
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 11px;
+  padding: 4px 9px;
+}
